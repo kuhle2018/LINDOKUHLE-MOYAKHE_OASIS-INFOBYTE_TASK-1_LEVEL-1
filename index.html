@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Radiance</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
-<!-- ===== NAVBAR ===== -->
+<body>
+  <!-- ===== NAVBAR ===== -->
   <header>
     <nav class="navbar">
-      <div class="logo">Luxury Radiance</div>
+      <div class="logo"><a href="#home" style="text-decoration:none; color:#fff;">Luxury Radiance</a></div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -21,12 +22,11 @@
     </nav>
   </header>
 
-<body>
   <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Luxury Radiance</h1>
+      <h1><a href="#home" style="text-decoration:none; color:#fff;">Luxury Radiance</a></h1>
       <p>Where timeless elegance meets modern design</p>
       <a href="#categories" class="btn">Shop Now</a>
     </div>
@@ -36,48 +36,65 @@
   <section id="categories" class="categories">
     <h2>Our Collections</h2>
     <div class="category-grid">
+      <!-- Rings -->
       <div class="category-card">
-        <img src="ASSETS/rings1.jpg" alt="Rings">
+        <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHXERTQLKHKXYFDZW5HMECBQI5VO%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjI2NDAwIn0.ct0EKG8mqOJXWlXFhuSZHAbMvZw3l3n9h7xpZbKQMbUO9qppLLcidobLAnoMk_RRQc6FtHHK23iWP6id4dWabv5gCl05FeYScsiV_XSM3vPP2vEQTEvFTmVMoj58A8atFccjsYgmMGjJWN-ZXW6AhQWamgL8lPBsFkaB36zp4Xzl5HDdEfHXvRpQAV8HREM7d_tWoys9MZS2KukpHL_Tpr72hAjmDjH_Umv490ABUS0P5hmlub_L3kSEpF4IEt9XVZjRIuERuMgAXmVSB-NxZhjqDx4N-_JSVur-0mEI_k_8Zzpaxh1ZYF4066T_hBWTHbUK_zNVogjSypT8F2yJmqHYkTwxJkbjBj8tQTChzKJLiFAn1bOZYDxbrvqB43KBTPxvJT4MdxTmRBCiPMghAA9ang821XCpkv_Sv1UfqgGUqTBCJiVyhga9e5lSu1OafYYejRKkrKFl_eKAKTirn9K4ZXy64raqx84o66ZtPUg.eULzEJ6kGanQir613XXiZorv6f4ogoGn5GLjrqIr-QU%26version%3DPublished&cb=63891202077&encodeFailures=1&width=336&height=336" alt="Rings" />
         <div class="overlay-text">Rings</div>
+        <button class="see-more-btn" onclick="openModal('ringsModal')">See More</button>
       </div>
+
+      <!-- Bracelets -->
       <div class="category-card">
-        <img src="ASSETS/bracelet1.jpg" alt="Bracelets">
+        <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHQ6OBO4AESCYRB2Y4PXOC7GEG5O%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjI2NDAwIn0.v4K-Mr7DbCQqCkokAxk6isg3IpXt_N3dAj0ekp86klGyCrwHzoHBhEZ6o-HufTlUSW68F4qcoz1kpXfo8Qwpnu44CbfQnlcRo5e5hjoJD8jrI6dbEMeeNN0uWEikwIAj0Mw0YbtiQgkwv2SJ8Pg15YKaw36gQvz39xx2BPT3qqw_flnCOQVL9IDzPdY8Vga00vWkdrc8xygS1Z6Q8Ciii5PdtAsbJ3M58WBxEzjZG678JufymxkuRZ-VU0G-qKSplYXO3-lHKc_syyVNXfNeZrxIed4gV67xuqXh4bpzgS4CmtZ4217-WpsN4X9bTR6p-xLI_RgcegsEh6zh8wOLTfJ0X28_s7MyL-IzQZ_QvgmoZYb6RqGSz7JYtPBWa1ctvkZTZwAJA7xYIj0_FNmJ8kcMqNrGWQbxFQiIsWQzqovmqynYlqVw5wJoYNc5ftJeRt7RDAHewxv2vweWSEinAXukiDvgcksqx_gomlSWFhQ.slNM5cWmUMJvrfZAddhpqJRyd64EVQ1bCdoKddEr1d0%26version%3DPublished&cb=63891201900&encodeFailures=1&width=592&height=789" alt="Bracelets" />
         <div class="overlay-text">Bracelets</div>
+        <button class="see-more-btn" onclick="openModal('braceletsModal')">See More</button>
       </div>
+
+      <!-- Necklaces -->
       <div class="category-card">
-        <img src="ASSETS/necklace1.jpg" alt="Necklaces">
+        <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=webp&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHWFKAIC4FORKZELMB6H3FR47QQD%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjI2NDAwIn0.MruqHdLnZzxTv8S0jEGoWvuFI3TAGOVu4949w4AVk_NOSIdi7CvU9BCLpdidTQpW8R8LoN803Eyq1x0IXCsRHfxD0avbm06qP2_PjX3SWM34ZFN161LwYAXZKg8JCBtlmcHQ3GGKt87a7yL_qGoTGXR3QXVT8FgtmuguBN_7TOadAia5F61J8_gpqmmYE4P5YBIe_u_MIKB1Wmuds6bSdSgsAROQdL5TnojUARj3tq26oqJ92o6D-UDl6WpZrmzEkvb3Khos_pB78-MTKzS4OasACbKobDv6WD6EcutDxftLL9va5hbVlICmAApSZwUrNg1chEfqUvOqOViqiaD8ri1E4oJ-VIWubvflNP9wT8JLdw_A0C1NWL1afIYSUMWHtalVgJjrbhdOj1hIHoneGh0ZWAtUUdt0kG8j-mnVVB_wdVOStSKY43ylKNT94OiMdCF5C-8ffu4UGjFSmbugO0iaRINkl6VPwofNjNBTNPU.cnZFu7jEw2_ObO1NpT4ZJ0mZDHijnWg0VNJ3fAD57j0%26version%3DPublished&cb=63891202249&encodeFailures=1&width=580&height=580" alt="Necklaces" />
         <div class="overlay-text">Necklaces</div>
+        <button class="see-more-btn" onclick="openModal('necklacesModal')">See More</button>
       </div>
+
+      <!-- Watches -->
       <div class="category-card">
-        <img src="ASSETS/watches1.jpg" alt="Watches">
+        <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHSTSQDOUY24NFHKQWV62IIVYLMU%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjI2NDAwIn0.7wNBpkt_IF8uNETW_ITYmIEjCUE4E9fVrGcXocB7UEOjwmTqb4o8tw_PP3N7vFiDBvMC0eS7I5pA6l7-u1218LfLSOkfdGOCbNH8c8RhIWAuzlFZjFxFce6OFnmmrDaZoRCE0JVkhyq3cmcO7qM9AkdzezgC1AN985zlQiIwzLmoUGafT7V2UdEa4gLCA7KRd3JYEiY0H2SxNvrl80Bt9l0UsPt2aztA38KPnas1YaJV-Pbzuxf2EqXD-3Sy2UA_QsfxLqw8pYSeoKyNEftUixAwamFd6JZEW3M4xep5aZQLBlBwTFK1IyAye5ArfStj10ZrW8Uf4bhZ8dFWUnx1muf2T472a6PpHXqA6xXsJbfmSCJTEZgANRk44mlj6kWrqcQ6fGQ28ZvPyLZpcoOR6asVjB3NAybf2mhGKlNSYp-wEG7NfAMZ5thhXmSfvyjASdZAxwN6Uc3FeZD2SovEdqUHOW1jmwXtnHjEWAySjGo.ymekiO6kQ51fRz2WlqKycb_sVEDnVPRbC_VULi0lzLg%26version%3DPublished&cb=63891202505&encodeFailures=1&width=336&height=447" alt="Watches" />
         <div class="overlay-text">Watches</div>
+        <button class="see-more-btn" onclick="openModal('watchesModal')">See More</button>
       </div>
+
+      <!-- Earrings -->
       <div class="category-card">
-        <img src="ASSETS/earing1.jpg" alt="Earrings">
+        <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHQQIMMYVEVSDNF3IZ7LKTHKQLR3%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.6DoUPgHuwnAQ813wOzPXDSoSdKjvzDvruAaRsvG2tQDjhf_KMDXwr4_j8Q5y4kp3FcMc8MYNGCkQPyavGdrjqclYqgksNVl0mm0MMGZ6i31_HDD1X6S0aKV4kUNk7bP0oKpOBNsCmWkC69pzB0N3aSaLGXRQusXXdENXnoGWa0GuTwwZTVO-qwFmY3bSt4sMUhfugJWnqSt1SlH-JT9qpbna2Yfwu6BuFnuUQwoSNC4tS27gK64fVMiVQXNCNZBfUYNEbPTNruPt7-NS-jzuzEM5DVYb36zAtIzI6PV4VMegmWLFf8rX7oubXjUfzDOoTRSMIlh9U7oZiqu_872UC_BDCzbl7CcufzrJrSJgrDqSLb10x6313hArzmcoyeszbt46AquvtH5MRAKy7B2__FP_AGYWK96NeW_gVHkMAELcEWWsGaYlltXZWDO2lo-6HvfnjBXwEPLIlX-9oWcOEvMtsG8ANtnLjyRVWchfbqw.IB-_BPwaavsTqUKJabwIg6sldsIdUY41621W9eowX1c%26version%3DPublished&cb=63891201532&encodeFailures=1&width=194&height=259" alt="Earrings" />
         <div class="overlay-text">Earrings</div>
+        <button class="see-more-btn" onclick="openModal('earringsModal')">See More</button>
       </div>
+
+      <!-- Sets -->
       <div class="category-card">
-        <img src="ASSETS/sets1.jpg" alt="Sets">
+        <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHTOXDHT5ABP2RE2ZGKX3DIGOQ3Q%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.f4d8GmF9ARdtSfHGE8OHIqOTLFlmhnL0XtwJ4nBIxwNz9oxkF-VlCkZV-gT12-oVOK2O7qYM9rOR9AWe1NgYIMRvRwdKI8b4Qdvzhm2yDVWPpf5PLG2D7CY-dAEEqnJgFHQHziRS_4Tl3cqxu4unUTSjle_mliQwjY0MBjFq0L70G7Lyapgce41OQuLurFZ9LLsir5UhE-eCOIBUi2oKtyrMeC-Eb99EC22xsHQd5iEe1z2gqPiegXIAbyPrNri2KRN9vK97QthubzPrIIKdPM2SXfaxCeUMTJZhO6uNcCcFBrutcVK5bCShFmzFiBdh10c48HgP0gAgRU7G6xX4O_AMsmDxfVmB4W2Tfyzg9cn3EytAbfo7-nr2krNJyuCdDleOnYikGtUAFf5cpKSmEcYFFueUsvGnvcOXpXTsWxASlHkwpTu8kiWiVw3L1SL0MFXxWl6BLn9A2hlWTPaqp1z5gQD3oQqbwt4-9LF_TlA.iQUNeVpyfuTmeO4oKuEtxP4BW4y9hEcXO7oCYPEuJcg%26version%3DPublished&cb=63891202698&encodeFailures=1&width=500&height=500" alt="Sets" />
         <div class="overlay-text">Sets</div>
+        <button class="see-more-btn" onclick="openModal('setsModal')">See More</button>
       </div>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
-  <section class="about">
+  <section id="about" class="about">
     <h2>Crafted for Every Moment</h2>
     <p>
-      At <strong>Luxury Radiance</strong>, every piece is designed to capture beauty, elegance, and sophistication.  
+      At <strong>Luxury Radiance</strong>, every piece is designed to capture beauty, elegance, and sophistication.
       Our collections combine modern artistry with timeless charm — because luxury is not just worn, it’s experienced.
     </p>
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
@@ -87,16 +104,97 @@
   <footer>
     <p>© 2025 Luxury Radiance | Crafted with elegance ✨</p>
     <div class="footer-social">
-  <a href="https://www.facebook.com/lindokuhle.moyakhe" target="_blank" aria-label="Facebook">
-<img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="facebook" height='40' />
-  </a>
-  <a href="https://github.com/kuhle2018" target="_blank" aria-label="Github">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="github" height='40' />
-  </a>
-  <a href="https://www.linkedin.com/in/lindokuhle-moyakhe-60366125/" target="_blank" aria-label="linkedin">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="linkedin" height='40' >
-  </a>
-</div>
+      <a href="https://www.facebook.com/lindokuhle.moyakhe" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="facebook" height="40" />
+      </a>
+      <a href="https://github.com/kuhle2018" target="_blank" aria-label="Github">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="github" height="40" />
+      </a>
+      <a href="https://www.linkedin.com/in/lindokuhle-moyakhe-60366125/" target="_blank" aria-label="linkedin">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="linkedin" height="40" />
+      </a>
+    </div>
   </footer>
+
+  <!-- ===== MODALS ===== -->
+  <div id="ringsModal" class="modal">
+    <span class="close" onclick="closeModal('ringsModal')">&times;</span>
+    <div class="modal-content">
+      <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHU6KSCHSRSV75ELPCL4ZYRSFEYF%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.hFPpG8FdKFE6Mlqt7Si-thZAlThFz2mE_qzxfzsHSVBKeZ7ZNmvIuDtjazSw7W_pE7qR0PbH70_hOeUQ33hQfc5mt6z0SvNSKiHzQF_6bJjXiV9Q-zBzKm_1Qd_-UlH1cXsUoEifhrQV0MtQ7B54ZY_mJiYJGFpHWuv3qNWsrBD9Rk68iffXxSt5YZgCCyvVcsSfwkyxnb9MluOSnjmtzOSIHagLjFbLBXdl66G0YG9tMyZNe0JkDDgHcZG41SXqovt7zKUk4mGhnHo1DAF22vylsdqvCf11WhX6WIEG_u4vsaLJ7-D5Y5swjEXixhuNB_jYIgfN4GvoYmYDHdvhh2mpr38KFOIXs5WTsyz1mrxT28XTX0yrZ-n0Bm58_9ps7eO8MRAXvyWluK8GONu84IM6Qegr0yRDycW9OxNMGGCWep6E2UH6doWeSsjXM1FlDGxfULrx57zmxi9Nd8Nhwl2sNFlxqQdFlO2MylaxMX4.RxUNXgQV89EDNojWsNLiucQw9BOkwft3quuCqbzYTvA%26version%3DPublished&cb=63891202091&encodeFailures=1&width=336&height=447" alt="Rings" />
+      <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHXMR2KJ3OX3TNDI4H5QLNAWPGUE%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.MLBJ9_qweAfuh52Iy3r5k-nXGZ3SLQ-HEouBebMdHiDJGSoZ8zPoA8ibxqZ8N0xlu_xQzV-DnaQqyFsq_XGEFzKPQ4jY6HJiy_BQsCEUrdm49Ef7K7rBfvXsOJKu9R33MvJ7uioqhQ_x7WxsdXuQkihn1IKUAGEdJ6Ks_EbdXpDljQJ8yxtaP2XHYjtQYO0gcM0W58M23WJGISS-jvFPDVml56g6hGViGQiUZVOcX7pssaG03nlcOBGKqXeFkrYx37epNwsaLa25mKw6IH7rBQuBy7vXx2MKQgKvcmFNlIDF1HsUW6i1WUglVvBVsMLEJuVdn-1fEnZz7GvJQwln1XXuudQ0nE8cNIPJlNyGExF3Mc-hlVUZ7sLfROXsozR-_w5Ea4VUeBqD3imP7iDJax3eCA22YrnKCmZu9rgwMCCA0rR6oljQSTrBmOXAXMShLkQ5vXja3HqBrZYMm4LsyzEvnzaQ0boy_QPcpiffmmc.Gj7VMH_N3_eCwMXZUanw6wSuYTAHvFEEpaPtuwO68HQ%26version%3DPublished&cb=63891202104&encodeFailures=1&width=194&height=259" alt="Rings" />
+      <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHRVSDY7PFU6YVDYRDIFGKL2U75Y%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.x1fTwUzJpDXL_k3biqNorhGhTBLpv5X_m0debYvGib0y4s1sZy7mmwULVrgN1K2LYJSIpAwzhRtkvw5kGZTKEL-M6nDqpLdrjZext97FD95dTYqHxpe3TzuloJ_YttxmuUULvMJGM2l6otIX0OdemGic63idELzUpYdqhG4dMzmjaCb-Yw_0iM2Rug-6zy0UZouWMG_ljBMZNvk4TVreAcKOh4jJ3dB7LZe5XRuJjf8omlSfNmP3Cwwakutk94uEwJ99_Y_q7poFfdZSZEWwBKeevdvUDoHWNlOSC_A8u0-TUfNBHUM6sYfY4s6KK7_-VEKUJl3CdrZkUeiHWavEZLk8Wz3fAB9EZJGsszDxUPhzbp5ArnlxM-NyETKwddv_rH-kFFR5cefi-y-R4cK3UDpWbzZavaXM5vc6WGRiBl34e0QlTuAkSkbrQSiixsFqAFHsdVFvTkNgWdwrWXfbLaPUn2k7m8tH5WFEeymq8L0.LBlYNyqTOrI7iAz6-sQthm_G7cvRTsj67yekVxuSl2c%26version%3DPublished&cb=63891202138&encodeFailures=1&width=194&height=259" alt="Rings" />
+      <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHTIJADOHGKQTRHKCRG2NTYPWKEC%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.171EHeZAwEafrF7Dz2iXCzdfMVo-4g27GXBADE0iut_2HkrI7j-XAG7uXEP46qogoIg3VjAvseuPYpyiiQzWZrPYcLDeGuP-z7rXkqp0KPd7NNzdetqsZFG9xsegT5uS0-hs8hWBfIYi4mV7uvW6AZygjWB1crmw1hReLPquepgMdEVAUfJV-d4nzgskeS3lmwm04ak-xHbZ7iaQufWn_oCyH3ILT7Asu9bVL80uO4noaSrA411GWXR12btfgWw48McnUvRlkc9HRaokSSD5NXqApc209Cp9JvwZOh520SduMLT0knzRUVV6e99h2c_zxP8O-JTp4TvQhOmWXm2t8vIeq1xnJgbnGFEx0O4FjJXDdqikbk9JPEaLV8JkyDb4aLfd-1HwtTn0X24N0Za4x4sFX3QeWoeHwfxA6aUqaCu16OvCnehDTzI5P23QHSlVFyovai-CdFRPnEGPPE5jYhFFTAJrOfO7hdKLDKnGrNw.04XgImYg33HJUF8yDWMnrO13pssnead9fQXAzoQF3OY%26version%3DPublished&cb=63891202162&encodeFailures=1&width=592&height=789" alt="Rings" />
+    </div>
+  </div>
+
+  <!-- Bracelets Modal -->
+<div id="braceletsModal" class="modal">
+  <span class="close" onclick="closeModal('braceletsModal')">&times;</span>
+  <div class="modal-content">
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHRFR655K5JBLNF2QBCBS57ZA7NP%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.11WC_0fzhM70CqVevRo1fwtk5RBaPHRmcXfYlSqLHRduLCwqXeHxthLEROE5k13pK_pRWD07oilEwzFOIPPs2VTJB8kofGrk9xAl_NTQB5kSsOTg9Ffr4uTUnA2L0x3DUBOFYXtN9cEzJSgrp4bePb9dH87Yw8I0DgJEwR3T7oBGMn8mYQzbtyqGr-j4EWPbQkbWU4DpgLBJH4JrUZuGztyHDK1LWtZ9SwXOsZleFHFJrK-zVT4rOBx8po5SdvBUlc5E9X-Al9m_fKdXsdiLvK8Sz8IrPPxshrgcmEWZqELRo34xQo2mcN2jxpODfm-BU05B0VQcdK8uLR0OrZ-R5_Wbr0X62v7vTU1EwSOKL1RJldi7_73VAQuLTAMycmRrSfsAy4XjiHAElsXEK9RL2kz-k3LwqpsZ8AxjVsr-awLhJVu2wXspMyePpoWLtU-6JFcsaxhxuwicKCzbHLD3uV99dn2Or0mYX7YwdwjlWno.bcLKBTZuUH_oeSVwfc57rKvJn-u5tizmf1bOzIHAmvU%26version%3DPublished&cb=63891201932&encodeFailures=1&width=225&height=225" alt="Bracelets" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHV23236LTJVFRAI6NECURXZW6Z5%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.977r-MYcbaL-sRHiApWMLcqWanoHfZcOrqIUiCPAGTyb65-AVL21oT5o8Y9K5exYDLlGk8ddf06Q5HRmjKYKcdo6wedP50fqbZT3fB56HrYRzLpLw7JHzXtqe2EPfnbDzu5z0r8L6dGVh2XiYL8P5yDhWucBgPk3VH8S5VjExXoyXHcZ8_beMdnobx1Z5jk1uHz8Cc8w55sxaHyCNPffkBu2nI1RCbNUGKLNsJ6KPwfy4RrKDFkDfrGaSsdqfxl36XrJPOs3z7zxXVh0oMIqp9LJlhhSr93-PEWk0-J1Aw7YNtJ6BfBfZIT_WKDaI87eyBahH0cMsniLpc4I7DgTzA15zq810pKVyYlElLDbOC3h4lXJ7GnHQkS1bp0nwjo2UX4fASZPwlYCq90neUq--ob8AgHMSzOHKIgEVo2saOfXyxCUjM0yPLVmRYk9o8p1HgnaBlgyfLkZ0siDPG7EjkbcbvG0ADQM8H0ExTNRzOk.I2hrUAzT6hscIWK8UbkveqlJYMJOX5yg7u-byWXxN7Q%26version%3DPublished&cb=63891201965&encodeFailures=1&width=405&height=539" alt="Bracelets" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHXMTGS5FRNUJ5A2UDQGG7A3TXZ7%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.QdAiITlnGAiJEfW2EThHMdcL7SLo4wAAajnx1aTJ4LXMeyFFQ4jDOqhnwqlRhWjCTeRf4Y4IqJXMEzrjRla8-h000WUgGaX6_xhME9SvjicJHMIvp6XsWqOHfl6ToaEmVC3bDy0fSO_Pi1p8hQZKneevbvs19SWnDUS_iXzPjvv4yoClDiw9lntA-9sgDtF6QgjqmwFp-aEhkpnwpFMv5R51Vaf6TriR4OH99fNnc7Kx5Iu0lWtgmJHUU1a5zcf3-YbvgMRGOQcmhG1uwltVp5GeRNC515BywCUjds4xPCOH53lHc117wTyQbb9KjjOpa7wZR9BLwIWx_gyFz-UcCtv1RU6deQehmc06N3nTmXuJHxMlNxGXQRWneWMHcmHRqGEeCJeHnRyQ8gOdkvEG6qR7dnyQ7psIJ1OQDAXcL1r2ZwUfQcSg43C7wQng1f03J8I_7BVkQnBgCMH0LQxt_YpV1_mlL8lIHB0tkr_Qh-8.HTGZag2HFcs75taEmZvdfrDOvyAeILzvG1TW0QXHCy4%26version%3DPublished&cb=63891201988&encodeFailures=1&width=225&height=225" alt="Bracelets" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHSUDW2EX3GEGFD3CY7E3PE3ZAM2%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.Pjt0xakoReEs7_e-Mxl4rRVh3FUC2T2iHKYRyLAvD5SoAp6PTWj7dUTyJWHzKrtwCrfm4mBGBQMMOQFr52ukEr_oZb44ms2BIX__59DwA1oUwv2warpA7eLhha8V6VAN_uVT2pq6FxsxoRKgl9L8tbZN1iUId9OHPxM6-eX2yNN0STUGftYa12GgpUb1uGFQV2jDE74Iq4e7umRmS6cEmF78bmv5r6d2l0x2jPYEAbE779grv-5iH754HHcOZ-hnwGeuP1jJwqyxv1Yx8xyCqwPD8bMYFqAnUS2QtmTsGsl6Wc-HOdhfUXHqq4si_MlwYpGoJ5Qe4NdoLXc5P7d4HOXwtxG6n_U5unTfjhiswyHmgHql7z045skySkc0SzymqMh2wzeoRLv4mslnhztpwcKajFBPu2AaZnx0MPQ0akdSkj59swZsw7HYdcGLPoyF14WEIggpxLsShbTG6ArKebu-sBXtp13Sjub0vIEwGx8.u0ZtnjIA-_j4AZv9GCFaqx0FggvRNu4wPdHFZUzH_-E%26version%3DPublished&cb=63891202009&encodeFailures=1&width=336&height=447" alt="Bracelets" />
+  </div>
+</div>
+
+<!-- Necklaces Modal -->
+<div id="necklacesModal" class="modal">
+  <span class="close" onclick="closeModal('necklacesModal')">&times;</span>
+  <div class="modal-content">
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHTBJS3JRJP3SBBZF34LEEXB2U3K%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.42sBU8-ffqmS5MloSUN-2QZExE6PSSxOAiIHiHiCSEDmlRH9WOGRMSvcq9haedzAF-DNRxgEnCfDLy5b3eeegDqEEYxCtFXvUJ4stFXm6Zs0soQbo4J87Wb4CVcFvknIavW9x96BUuI1vzXmo5D-vDiTkn6WAA05T5UBc4alLWuXddzGbZq1THoLYd-n_kBAkkyYgmRpaURiFdfdjsJc3FlHPj2KPYl8kXt5H6VEXo9fbyK8calC5A62Cp-CNV_s-Sc33dRE5BdccgWnD9p4iUMyjmpp8HAJMrMlpXGstOVH9dkPowl3eEvPZCj9cnRYSxmVTAHwTsGFbi1s11R6gB4_T86mLVdUSFixC2HRtPl7qAWES7Ay4b7FEg1lRHPhCeAJtomIg5bCP1Gw0zICwdaJQS7PZkHgLq9DsufgXnT2Hzfl-Y652hLDsf3jTVSDaGVrThtve-S_NTSdFZ7eCEQIdfDSuCdjqYBAh-_gUqo.3hM94a7odybTvUKB65fCK8vIYgTVasoHzxVdBvwbA5E%26version%3DPublished&cb=63891202296&encodeFailures=1&width=336&height=447" alt="Necklaces" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHTCEORZ3X3AOVEKNWA6NUXDLII2%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.ZYkxXm_s5nN_KqaWtoRWEFU32aVYgY_Gb7L0vf7VYtZlWrlUrq1q4zmUBvRJgiFApXt-9stmCNX-NTxIpx63OJPrGy0PyVozV8K91iHgXmmYOXe9xrSYzM3k9De64ghwMC3IOqyZ12Qt30ev1wKJVdEkXRwKppsyAATAAdy4MQ9RhuDT2lsRVxv1S1swRnPF_dxAgmUCyTI6J0SQc8PouI2XVH5d-BFd4b-PF-sqrbuZfZVOONWjFucdWS-RLK_Wk1pq3aCDgggPS4cD4KlJOetcD0MQbH3937C3V43ZEHYeg2r3aBZ82QHw_r3L-4nP3ZOKB0ARQHAU_6ez8kdB54z1HTKEGF-L2HqBUNuxWoIgy0TfjerGhzH6cG9z3Jg4dO6eQ7uDyzJFw30QooadG3LC0tDcKWMSTPJSVqtQpthKXvlcdj458Kds5KnGO3ND8Ksn1-pZPN4ZZa8eNnd0pL2nixI9NNgn1gmx8BQR9I4.B7rFtjIfDOSfqFeNS7GeAUW_OoOPtiZ1puVZEpR94x4%26version%3DPublished&cb=63891202366&encodeFailures=1&width=592&height=789" alt="Necklaces" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHQM2WMIB7KNCRDZEDZN7RA5NZBQ%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.4_8CmoON-F7i_IFC6-cRKIIdjUo--EMMzckio9TvCX231EERXYHgfoXPu-c4XmXkkn39o3FoPLaYoFwQlIkPiIQQouI84gRG-8OhNMa6E_PUodg1c7C1aEAmtIk5uGBr8MlstduuZu-zgxdB8bk_wOcJEjxaENL92jUQDQblQYv2PxMn7AlPD9-FD06vSeGY7fVUcToFIVKNLBISk7y_mrFz_pu9zXzycjSezq9Z1F6EG3hV_V0bWrCoj5nFzyDcDOTSaXij3ihqZZgR8_pJT8VV0XLT72pB4pVtKVV0nySzPKlV3eQJ-ssgZjafN07zE_trkAZiTnhZUu2vt3eEsw4sVgxIYvtjvBTUCMeuJVJqV7zs5Epk42QxSd8h_lFFkrTfw_tsU5LBs4AC0_JqdOUWceZzJBRUoX-rBO84mNROQyuO0zEKEzBMTWq4TNgZ8ZRYTr5oN29uC0BjKHi-Zr8oaTKPtiMHMAFRpFzUDHw.mmkHVB5C_c-ufglFLiMHvPvIGVryF2FEcjO5l6HyPA4%26version%3DPublished&cb=63891202388&encodeFailures=1&width=194&height=259" alt="Necklaces" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHSJV3U3KE5FHZB3KICO57B2VOJB%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.imDyiRDMw4_49VlEHhITWt6M05RDjTF8gczF0QKxPl_jaI7SKKE9qjipIOsjpAYGwuqmp-XK5z4p8ysSeEuAfqdA6MNKPcb8iUMKHT24EKfy7eP1mNafMh-i_jxPmnwTLZrlfmBI0aPonfPz35sYwHGgWiFuRaqHnIuRfEf00OMQYA7bQilTjh30pTkj248ozJUiwZxD6HqXL7cHFBbH__LxoBHwMaq4JFKy97cU2EiGa1EQKyuQJNTGgRcqZuhHVU1rjtStz9QH484mUfHmDxeEMkmc45A5TgtJh0iCwn0GWQaYtYb_2cAYALyp_VJJyAzZuxc9MVMRa4abAjmuGhSg7CRFrqUV_aEURmlRVUEiwdUkr4kN1FhwQsFKf7ZYVwnytMoqgnAxQfNgUEZmPtP0Ec6u-hbvxCfQJrn26adkFmrBgmmLPeRYxgjjWAwU5cwSxedI3t1XMPK-hHcAMZrgLF5Clxro3SdHwuWsVBI.NA_Z7HA1kkTlQNrSwDsx1TOY4n_8UHZ0xN6ryQeLY8U%26version%3DPublished&cb=63891202452&encodeFailures=1&width=225&height=225" alt="Necklaces" />
+  </div>
+</div>
+
+<!-- Watches Modal -->
+<div id="watchesModal" class="modal">
+  <span class="close" onclick="closeModal('watchesModal')">&times;</span>
+  <div class="modal-content">
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHVJP3ROEUDAEJC33WUFZWA3MSA5%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.AX2EFYEctDLe5RovM-irE19MhpNA90fALU_7x7NnBy2yhuP1JqARF9Bu3RftXm0uOjBae0tC4pxrQ8Jj0Of1ZDjgSZyNI0oh6PUtH8yJVaezhNCfFPA_KVfRDPDBofyk_757iMAXruvxppbEV0gQL_SXmheK1LKfQwdIx2sKyYh9OGVOkmdIQarLX5f6miC-5um-j39Fq1sKsArqnSHLZaxIJKx9lk8Xp_JQ6Svk-To38-PJrHwQog9r87n6nv_caC66BV210aF4krlUAx22DRPyB8QsurfHkXGPi0qMKp_8j_3Qlrr3VFucI1_ZubSWYZI7P-9_lIN4GS7MPFntQ582_2fKIGiZODS6EaycmTQWkTa0r56lPIjrH8QVX60lrRkdkbyf2VZ1rlBFPK8ByUFvgN7TuVsCt9vKhtPxG780Xb0eYARQOo-4QOg-kDo7g96H9H6N_LRlW7cWMAZ6y9aSQHySNmlASyEZlK3ESMg.z4U2gI0wHTcd_WxWIihewohQDe0boL2Cs0Ap2qHYSi8%26version%3DPublished&cb=63891202555&encodeFailures=1&width=336&height=336" alt="Watches" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHVTGG6PD64TVBAJ4QCJAVIYDRAT%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.tNIJTGPpx3syH7a9tkdi7vaXo8B-7Z3O1rPw_l3g4-EeldaWB9UDghwQp1KTH_mHBg1dYEczGQ84a-hgfUWUFWiId_3SZEXrJTdxETwMRQGGhmoM-0zPp2HRMj3ZaltaoivBwYgtlxFd61WgLpl986yY5wL431Yr8YHOId9G1K3sP7mncn3fpkUnTxAeXLNwwLRFqB8x6oEVy7LEpNYE9vHugptT1y6m8j890__aYsg6dvOUPT_SMtDmyOXvQ5By4CUkoubO3ExN7VmomMRosNW4DqSC7Osn_ysSLH-3ThG36OzzjIr7Tr2klOvxQ1MTu6RJwN-uyRZJMQaYg2TaPcuV_nBJUvhSir9lZ3P5JQN1mmHIok6M68rPLaq0M6T_KOWpmownxtkQkv8udrBZSIlpSaOCLAxylc_u_DotR8_UFTSQIQx8coDonBnaCDis8pFeMOw37A8DkOHiUqK3Lia4PDJwilysisP44QUh6Jk.TZs7VImMht8h1LQ_4QTGkeEsBylwEoIbZvPBA0TT9AY%26version%3DPublished&cb=63891202567&encodeFailures=1&width=592&height=789" alt="Watches" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=webp&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHU6H6QELYVZRJD37J3DTGXOPH5X%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.soZvHUubwzqs-cDknPjadeXTcIxMhj24bf0h0offH3LFpAA1l-Cnk8Zn2Klv1DNAxM0uCFk_3WQjo6U_atEFDXVJP7zYUFChhQZ-jU5qwDlxD9y5DNJKJl5h9YzwgJcS7WjnAHesqk3knQPuUC-uJ3gG8c8UiSYoD6CAULnewsBmG5rhz28j91wI4b8fTlH5bKQKtOYM5ceILQaQauTHAnv0608WvYSz07dRq-5qZaUcIC66ZSQZxdS_ne_ZOcQY2FIsAztuzHhUsKFamsCy-tFeKyWVsLfEFnwbICjnFI4Vvt_shL9x0q25x_okftcgxK665A4NbmufJ9bKRLcW8E7YlW05LKbIqBgipTy7e3UEYHhmLmn3n0k5T-JL03aEwOH3hGPXLZ7paUTyuDz3FGj6cXoimMXsEGpp-tbINH60gYvlWEiCDD9XssmhEBwXY3ZrB6IPkVTXJAzINwg8pUNX-hRXCCVANUSdhEOlG3c.Yb8UgpnMc9uHlDu9rAzmqfqnEQiWPAH6N2G9mljvY-s%26version%3DPublished&cb=63891202589&encodeFailures=1&width=592&height=789" alt="Watches" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHW4GIKDL7N2SRAI2Q6M6Q3HPUF2%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.kgOU_0IYhXRHrcsHZ7T1bd2LsZ8w2_O6P6y-Rm1IEprmA34avdqGDoen5OsPn11SjMw1MnjpgJBwOaAFJ9SwLroNmt46kdQ25P7bnn5A6Govhrm7B2jsupJYyK7isbyxf3_ufxsZv08oGx6mbCBGt6PEEdRrGhXsX5r5C3gAlx7G73rJP0wdavjw-BB0krha_l1I2PhTOASkk5jiPVgXXbPx3nf_6VOr-oRosdRSo5sUyBAQ1zh9110x8opaYBlyJG__mmi6R5aR8Gb7Fuqmzu0aFfVQD3pd2mszhXPQO-R4FL-muMz5N0NxfpSDsLjxF-Z-bFV--8K5bgSMrWABUs8xIRTe1FbrdxpjrFh_9EbaMM20MVBpGManSye8u0Dk11-TUIg5_MxUg-S_IDarykbavruGCPDv8ovayAm1ckyyN1xlmL8oMI5Slti2xyHfFZ2JSaoMj0kh2t4sCQkb8fp-rU429SUb99fyuL-NkRk.5ru1PGUOoeMUkKnQuDyhvNh8UeNtogfmFBs0wP-vBIo%26version%3DPublished&cb=63891202618&encodeFailures=1&width=336&height=336" alt="Watches" />
+  </div>
+</div>
+
+<!-- Earrings Modal -->
+<div id="earringsModal" class="modal">
+  <span class="close" onclick="closeModal('earringsModal')">&times;</span>
+  <div class="modal-content">
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHQQIMMYVEVSDNF3IZ7LKTHKQLR3%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.e_s5x3jDFNhyTkNXxkiTJrDORS-5wLYcBJNJM6hGoeAUlWUPM9-E81MgdQjn9Wb4nB8u3bOOzsQx2p67KI2MY0NHy37S6ROJyiBRM-9lI4Jv-LQuwBqwcpd7FnYKGLjyWlHYrbx9xwypepOl9gSuuHCjVrowdOQNM-oySFNa4iyg0rASwLUdEJjR6iPL4GGcZYlh-uWDtzY3zaMjV_k0eEhn1SQxL8qPiK3TugltN1TX3i8xDWBSKwv80R7XPNPVFJtxbo_2dAcZdmbJFz-XFI3X2Wu1PKwY8ZQrjG6-UNtyK7-IldYNvigTfpy7zznDZ4fHvg4QNb3O_9ozOtfUo68grKB-dITJ4_f5kVUPPoPm_iGyowp3hrsgXswusb1WJ1YYCfYZ7gqX_opiFQqQIPff1Q4fsYFBOGstYM_7wY3QnJvWeU6-6mNfDBVY9hn2i4ZGZOwkpMe-kmJ6vqG25ZQiC9PdFSu-PXb5bOADkNg.IB-_BPwaavsTqUKJabwIg6sldsIdUY41621W9eowX1c%26version%3DPublished&cb=63891201532&encodeFailures=1&width=194&height=259" alt="Earrings" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHV5RGU55J4VHNCIPVLTAQGUKOQR%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.PuoLrcbEt6p42LmXoM1lcxIpJuxwS7w01bo2A3TD6r0b7OA9Qwxupk1TMJWnw7BOyVaRMYLNben1hCqLXFTola93FOWu6XBzXCOMMxsgGpLq3tK_s1hjhASzOLitro8qi_sEe81g8Kt0gnFOZIAwDDnzf4U-5PDOCpz1NLzTaChG92jCCh7EiJFJmehqvmLg15UG_Vtn2hOH_dqyWOV3Ll1sPgUUEpHNtkHdxUdi8ZQUV2cXtWWpMI--H5Ri-IgeFpDOAUcYjEeNEmgdogHgnOY5jVSlHkeZmPYwz8T16peeJczpvDPMRsVbOcjgHjcbIfs9-fLs7Uss__TV_7JJW8rSx1L3KoHmWAOHAmKaWpaz5lLJCzWmzRV14JI_u6muG3cmTvu5sd3SEdcuRdvhX-MDuy2-bMoBURGmRZxy3dj1aN_pH7JVHEWndiPpgxSZ4UMt-fdiBokR8LDTA6FvG9N-2bCxSlmq_VWpNvOYPac.qR7EdTC48OmmcG6jO8RvITVdXCv96clHLrTxQTYxgFY%26version%3DPublished&cb=63891201567&encodeFailures=1&width=225&height=225" alt="Earrings" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=webp&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHQZQRYY27HIG5HI2UCH6HDZHHHI%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.fY04bIn1-Ej2SHya8l5f25yAuinmnlaZLQoh3HDZTPjrEQrSM8G_qUm1lfDrAagQOMnTl2khN0U2kdW5uEumwLRdgOBfeBQB-JmiNsZJapCxweNhu53wE-aeVXRuU7QdicwvgilGneHOquAbmDAP2wBpCMVa2TaCktRTddqz8M9A3TjqlaGi4ChwJNpkyjJkhvrPK23q2Qf8_qhj1W9mP_bauOEoWPZDy97RhHkpw_54PuBsZOgtD1KebnwXgsbf_vW3diW33N7qqm3Rt0WwyptLkQpvlvv8g4evUBPzEB-BJxDudXSN6vIR6qKbiwQiJmw1LkvvLusrOBctUjnaK6470OyWOKHC3URy57vyW2ype1Qk2o-74YnAv8NhLZYEvCC4E9mK0kG-n4YEJcxuHgeDUlt66eYX29JpdINTzi0ppmOfj0814uZyElS4jJICAKrUrkfVzZ-ryMeb1Vb9Ap97VXPr4Elml1hS7HhwIP8.CryjY8z6lwqx-S8gbrMSpaRCdhjcXO1W1tTGIXff7vE%26version%3DPublished&cb=63891201646&encodeFailures=1&width=500&height=666" alt="Earrings" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=webp&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHWDRCSTYS65C5F2BCT7CHRASIK3%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.bjK81OBxeuzFM3o03tWsornFuzZMPkA8WAm68wc7dyw0VqFrHU8XLK-YvzMttPLkrg6Fo6JaxblsmxmJYd2h5yxB0x_hnh1G4BwUEuKZl6po4VjVYE50FJ3xcVHzLXNsfnGT6DcClqkRom1bnqg1pwV64hs2orZ2wM3eUBrrKleAvFs4spc-Ycy4KnGVE5d5cZoOvHlkiuAdX4oF_4U3_mczm2YYM9QSz_LHaJg2PEqiT8rJckzvvo_bSldV21ZE4WSgpg4vOmreZ0dkGst-dyeYqxudoJ0RutjsGWYfpUoB6Gmlj3b8A2DS9wM2rSDj-Yo7wd4IcC34zqWxInHmNT4VPAydoFk9gygfbhhHt8HK4QNM9LT9OWcTG9XzrPm0tWDifTe6g3DUYYIENzppcbLTZpRY7aYI6Y1pHaSg5M_uWDNXs-7w6fvZ7vWcSJ2cv2P58yoKnfSc0nLjJIs-oKPyE8yzHm-zPobgG3eJ6Ho.8--boHk1uE8WFF0UA9PHlI3nZbr8CT9Zg1_R3PJ6D08%26version%3DPublished&cb=63891201705&encodeFailures=1&width=592&height=789" alt="Earrings" />
+  </div>
+</div>
+
+<!-- Sets Modal -->
+<div id="setsModal" class="modal">
+  <span class="close" onclick="closeModal('setsModal')">&times;</span>
+  <div class="modal-content">
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHTOXDHT5ABP2RE2ZGKX3DIGOQ3Q%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.TZaQJ3CSoruKRH1r1HhfIOTVINpbcYPPewWpmZiCZR0OS0WM90S4m1A-0_rCgFmDYdf6Uc8qJUdc5PlgE7iFbwV9wsyOX0eVZ26aOQUKQk2aPjg4BQ3lfFEYBTcwTOmjHRTLgwUkQfTrUdWCUEy_uxyuCG--1S1NV13FqjDJnSJACAcyp-kvGsj6Jyq0KCsOMEzXXUIJO5Sm2aoGnfx4nZ3CXjsQPAapzn5EP90_aPToYisy4_kITKh6YIaZgqoNMtXmaAnHooHbgmncpUeBU0KEARkpS89RA6C1AJAXzq11wmhBHw2tHX4bnD5n2DcC5OGhgLJz0i0TwMU6alJVl_nn2ErUJDVg-JUACidsLukxI8Sw76I5cA6dy4avbdwLdjOq32Zedh4jJZAivsMStdN7HjmN-uY07XptZQOBd5aOM2Zn4cxJqqa2weeoWgTea2pmRLNS2KpSL_5ErCU1E0mQFSUB-emTfrYH4qfbfns.iQUNeVpyfuTmeO4oKuEtxP4BW4y9hEcXO7oCYPEuJcg%26version%3DPublished&cb=63891202698&encodeFailures=1&width=500&height=500" alt="Sets" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHSTZYL43WGNXBFYG746ZZQGWSSU%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.E55KVA_YRjTk5664DLIQDu6CbuW1q0DNYY8yyUcx8E87BUl-OH0wi9PJ8JJOAWWLkcPlp8qwtpVl-bFGlfwtxL-2Qac4-wrkwVb-hZZNqb3s-Bk5p1hopNdKFcM2sjucYkveb-bLovoMsnRgvoMzVTHX9OozD7TWUPepLaZTwBxA1Dok-qNOpZ50-QC7Gm3IHMRk7arnPxLTBZ3vxAIsyv6vnc6A68i_dqqQyWcpxxcnOfCCaJIBrJ3hQY14bJWW12JHTNTrhudboy8gyx-LTVLF9xZtj-W_CkDweOAHE92KwQWuPJ4qXn1b8u5vvj6vFQrhcuCGzpMwfy02EZ9hxeJ7ItzZs5clkunYNhd_zIW5OzUOsPYxPn1VfC_-NWGLjYcVtRSTPdkV40yMH2hzuNZmepDtNW4qrcOaspLYotCfFBC8bz3-44Re0521RBmCUorNpfsy6kBq12sYN5e3lieNnAoz3qzFpQ_ztr1q77U.D0ZLeS2RZK-8SBR3rIby0dh_kEUYJ_e1jipfe4IfJzE%26version%3DPublished&cb=63891202728&encodeFailures=1&width=336&height=447" alt="Sets" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHSY7W336237BNDYJXRDM5YEQT7F%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.2cCbGJJXtysXS1ljoONbWJxogO8hUc-jSQyX9kO3Y35IEI22SsUy0vNClDQe7pW_qv0aS-EbktGsYVAJuP2uc0EN5RmRZNeD3Ljnqm6Tp3acN9D6LCs26MSuKuzNlHnLA2YBoAz4spSgZlImxSQfyM1po1_b29ADODMSnE2FgJbq0dQszhDwFiCKbMK8jlAYDey0NQXXexUa0JfQTV9CajgSDttuBBz_Qoryh3SN9Ks2Al4QH0zH8koAnweYx7RX-s3TRXi_Y2rfBmsAYu3kXqh9rdD3mfcykU4YAHTbltzxh_uw9edCvlawckb9fnuBe5PpYAyy3C4qHQuUSqnxIIRHKVrwlcoFKRt8sE8gl3GwIpOpkYZ8-SaDU8uP0sxBGOow6rxDZx2wG46PqdpyRLgvpIn4_V5G5grplZAvZWnrgTNynNM4JZQVe7PqAZfYNyQyzplA7QQFlscuauiVgWYZ9Jzces5fwkHtgj4sn4s.2LsxSjhvNysu_dcgAujxIJoNsQikZ7szO99bwJk5BUU%26version%3DPublished&cb=63891202828&encodeFailures=1&width=300&height=300" alt="Sets" />
+    <img src="https://ukwest1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=190299&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!fYKBhQWcKke0sgiYT07ca4TMWoJE9tRLukxyyZM6tFVewE9MOffGRYCwFtxL0Twh%2Fitems%2F01IF7JYHQYE3MT44KTBRBYMXSWIY7GU226%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NTgxODI3ZC05YzA1LTQ3MmEtYjRiMi0wODk4NGY0ZWRjNmIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzU1NjM3MjAwIn0.l8JWtUtauXhlCrpTu85lY49PEvKzjyQEM7d_x_bM6WjION3Ah1IZ7QZ5mybOjios9ob_yvJ8Msg1SMPYion31cHpn1nYxkOLCDsVmD4W9wSwa5efAAsEtycp8ymqwP2UyB2SYcquKbzZxSsEQOKBA5t54ok599xQYDn8MNuJXhX2OX2CGx2YCVoLD-dsbNgQyltTTIpHflGhsd4HiQ60MqISOtTxVNxyKfux6FVkwNGl3SiIAKzxSgOOpeN_BjsnPjcKbUKU797ozSLrR4qETXKOwrPbMO73GemnMVC4iDHTwHiXUDXxMMRT3Rw_azgT0JeRQ8jfDYv-EdJFmjuX1FhrS3BLjfOFo0h2fF4kKAgGC3PC4xIHhcI_JYfCSo9y_FiL08VSvXr2rSf7XteaLFHZlBNyRFiX6NG9rL-hCyC3YjCwVygkd1nAKf1XHFVI_4-yZRFXEkGLT6EX3j4nOQKn3WBAC_723eb73nCYBW8.1bfsSCqIVBLEb_SH9TdyMij0KCl90QttHNZQMWA876o%26version%3DPublished&cb=63891202870&encodeFailures=1&width=226&height=223" alt="Sets" />
+  </div>
+</div>
+
+
+
+  <!-- Repeat similar modal blocks for braceletsModal, necklacesModal, watchesModal, earringsModal, setsModal -->
+
+  <!-- ===== MODAL SCRIPT ===== -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 </body>
 </html>
+
